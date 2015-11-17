@@ -11,13 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-
-    $menu = app('laravel_dashboard')->getSidebarMenu();
-
-    $menu->setLabel('Main navigation')
-        ->addLink('Dashboard', ['to' => '/'], ['before' => '<i class="fa fa-dashboard"></i>'])
-        ->addSubMenu(app('menu.manager')->createMenu()->setLabel('Layout Options')->addLink('Link 1')->addLink('Link 2')->addSubMenu(app('menu.manager')->createMenu()->setLabel('Layout Options')->addLink('Link 1')->addLink('Link 2')));
-
-    return view('welcome');
+Route::group(['middleware' => 'dashboard'], function () {
+    Route::get('/', ['as' => 'home', 'uses' => 'PageController@showPage']);
+    Route::get('/configurations', ['as' => 'config', 'uses' => 'PageController@showPage']);
+    Route::get('/sidebar-menu', ['as' => 'sidebar', 'uses' => 'PageController@showPage']);
+    Route::get('/alert', ['as' => 'alert', 'uses' => 'PageController@showPage']);
+    Route::get('/breadcrumbs', ['as' => 'breadcrumbs', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise', ['as' => 'customise.index', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise/logo', ['as' => 'customise.logo', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise/topbar', ['as' => 'customise.topbar', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise/sidebar', ['as' => 'customise.sidebar', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise/control-sidebar',
+        ['as' => 'customise.control-sidebar', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise/footer', ['as' => 'customise.footer', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise/assets/head', ['as' => 'customise.assets.head', 'uses' => 'PageController@showPage']);
+    Route::get('/view-customise/assets/foot', ['as' => 'customise.assets.foot', 'uses' => 'PageController@showPage']);
 });

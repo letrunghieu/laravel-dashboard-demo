@@ -17,7 +17,7 @@ return [
     /*
      * Show mini sidebar when collapsed
      */
-    'mini_sidebar'          => false,
+    'mini_sidebar'          => true,
 
     /*
      * The skin color, available values:
@@ -35,7 +35,7 @@ return [
      * + black
      * + black-light
      */
-    'skin'                  => 'blue-light',
+    'skin'                  => 'blue',
 
     /*
      * The color theme of the control sidebar, available values are 'dark' or 'light'.
