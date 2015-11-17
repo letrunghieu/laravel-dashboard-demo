@@ -1,0 +1,1 @@
+@extends('laravel_dashboard::layout')
