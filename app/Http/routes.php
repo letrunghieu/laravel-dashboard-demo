@@ -27,3 +27,23 @@ Route::group(['middleware' => 'dashboard'], function () {
     Route::get('/view-customise/assets/head', ['as' => 'customise.assets.head', 'uses' => 'PageController@showPage']);
     Route::get('/view-customise/assets/foot', ['as' => 'customise.assets.foot', 'uses' => 'PageController@showPage']);
 });
+
+Route::post('/alerts', function () {
+
+    if (Input::has('success')) {
+        app('alert')->success(Input::get('message'));
+    }
+    if (Input::has('error')) {
+        app('alert')->error(Input::get('message'));
+    }
+    if (Input::has('warning')) {
+        app('alert')->warning(Input::get('message'));
+    }
+    if (Input::has('info')) {
+        app('alert')->info(Input::get('message'));
+    }
+
+    app('alert')->flash();
+
+    return redirect(route('alert'));
+});
