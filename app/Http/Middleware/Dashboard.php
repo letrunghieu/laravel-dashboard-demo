@@ -17,7 +17,6 @@ class Dashboard
     public function handle($request, Closure $next)
     {
         $this->registerSidebarMenu();
-        $this->registerBreadcrumbs();
 
         return $next($request);
     }
@@ -49,10 +48,5 @@ class Dashboard
             ->addSubMenu($cusSubMenu, ['before' => '<i class="fa fa-street-view"></i>', 'url_def' => ['route_pattern' => 'customise.*']])
             ->addLink('GitHub', ['to' => 'https://github.com/letrunghieu/laravel-dashboard'],
                 ['before' => '<i class="fa fa-github"></i>']);
-    }
-
-    protected function registerBreadcrumbs()
-    {
-
     }
 }

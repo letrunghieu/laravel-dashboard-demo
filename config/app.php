@@ -137,9 +137,11 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 //        \Barryvdh\Debugbar\ServiceProvider::class,
-        \HieuLe\LaravelDashboard\LaravelDashboardServiceProvider::class,
+        HieuLe\LaravelDashboard\LaravelDashboardServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
 
         /*
          * Application Service Providers...

@@ -9,7 +9,9 @@
         "laravel/framework": "5.1.*",
         "barryvdh/laravel-debugbar": "^2.0",
         "hieu-le/laravel-dashboard": "dev-master",
-        "barryvdh/laravel-ide-helper": "v2.1.0"
+        "barryvdh/laravel-ide-helper": "v2.1.0",
+        "davejamesmiller/laravel-breadcrumbs": "^3.0",
+        "graham-campbell/markdown": "^5.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
