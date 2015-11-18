@@ -12,7 +12,16 @@ class PageController extends Controller
         $name = '';
         $content = '';
 
-        if (!$route || !\File::exists($file = base_path('/resources/md/' . str_replace('.', '/', $route->getName()) . ".md"))) {
+        $config = $request->get('config', []);
+        if (is_array($config)) {
+            foreach ($config as $k => $v) {
+                config(["laravel_dashboard.{$k}" => $v]);
+            }
+        }
+
+        if (!$route || !\File::exists($file = base_path('/resources/md/' . str_replace('.', '/',
+                    $route->getName()) . ".md"))
+        ) {
             app('laravel_dashboard')->setPageTitle('Laravel Dashboard Demo');
         } else {
             app('laravel_dashboard')->setPageTitle(trans('titles.' . $route->getName()));

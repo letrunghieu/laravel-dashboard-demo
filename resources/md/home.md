@@ -21,6 +21,10 @@ You can head to each library above to read its documentation for advanced usage.
 
 ## Usage
 
+Publish the public assets of the package
+
+    $> php artisan vendor:publish --provider=HieuLe\LaravelDashboard\LaravelDashboardServiceProvider --tag=public
+
 In your view, extend the `laravel_dashboard::layout` view
 
     @extends('laravel_dashboard::layout')

@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'home' => 'Laravel Dashboard',
+    'home'    => 'Laravel Dashboard',
+    'config'  => 'Configurations',
+    'sidebar' => 'Sidebar Menu',
 ];
