@@ -44,9 +44,9 @@ app('breadcrumbs')->register('customise.sidebar', function (\DaveJamesMiller\Bre
     $br->push('Sidebar', route('customise.sidebar'));
 });
 
-app('breadcrumbs')->register('customise.control-sidebar', function (\DaveJamesMiller\Breadcrumbs\Generator $br) {
+app('breadcrumbs')->register('customise.control_sidebar', function (\DaveJamesMiller\Breadcrumbs\Generator $br) {
     $br->parent('customise.index');
-    $br->push('Control Sidebar', route('customise.control-sidebar'));
+    $br->push('Control Sidebar', route('customise.control_sidebar'));
 });
 
 app('breadcrumbs')->register('customise.footer', function (\DaveJamesMiller\Breadcrumbs\Generator $br) {

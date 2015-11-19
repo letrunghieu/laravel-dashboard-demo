@@ -34,7 +34,7 @@ class Dashboard
             ->addLink('Logo', ['route' => 'customise.logo'], ['before' => '<i class="fa fa-circle-o"></i>'])
             ->addLink('Top bar', ['route' => 'customise.topbar'], ['before' => '<i class="fa fa-circle-o"></i>'])
             ->addLink('Sidebar', ['route' => 'customise.sidebar'], ['before' => '<i class="fa fa-circle-o"></i>'])
-            ->addLink('Control Sidebar', ['route' => 'customise.control-sidebar'],
+            ->addLink('Control Sidebar', ['route' => 'customise.control_sidebar'],
                 ['before' => '<i class="fa fa-circle-o"></i>'])
             ->addLink('Footer', ['route' => 'customise.footer'], ['before' => '<i class="fa fa-circle-o"></i>'])
             ->addSubMenu($assetSubMenu, ['before' => '<i class="fa fa-asterisk"></i>', 'url_def' => ['route_pattern' => 'customise.assets.*']]);

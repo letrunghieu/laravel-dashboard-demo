@@ -22,7 +22,7 @@ Route::group(['middleware' => 'dashboard'], function () {
     Route::get('/view-customise/topbar', ['as' => 'customise.topbar', 'uses' => 'PageController@showPage']);
     Route::get('/view-customise/sidebar', ['as' => 'customise.sidebar', 'uses' => 'PageController@showPage']);
     Route::get('/view-customise/control-sidebar',
-        ['as' => 'customise.control-sidebar', 'uses' => 'PageController@showPage']);
+        ['as' => 'customise.control_sidebar', 'uses' => 'PageController@showPage']);
     Route::get('/view-customise/footer', ['as' => 'customise.footer', 'uses' => 'PageController@showPage']);
     Route::get('/view-customise/assets/head', ['as' => 'customise.assets.head', 'uses' => 'PageController@showPage']);
     Route::get('/view-customise/assets/foot', ['as' => 'customise.assets.foot', 'uses' => 'PageController@showPage']);
