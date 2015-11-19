@@ -12,5 +12,10 @@ return [
         'topbar'          => 'Custom top navigation',
         'sidebar'         => 'Custom main sidebar',
         'control_sidebar' => 'Custom control sidebar',
+        'footer'          => 'Custom footer',
+        'assets'          => [
+            'head' => 'Header assets',
+            'foot' => 'Footer assets',
+        ],
     ],
 ];
