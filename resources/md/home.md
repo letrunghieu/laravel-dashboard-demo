@@ -31,7 +31,7 @@ In your view, extend the `laravel_dashboard::layout` view
     
 To set the page title (the `H1` element), override the `title` section with your heading content inside
 
-    @section('title)
+    @section('title')
         The page heading
     @stop
     
